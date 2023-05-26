@@ -131,9 +131,9 @@ h2 {
     z-index: 1000;
     height:1px;
   }
-div {
+/* div {
     border:1px dotted red; 
-}
+} */
 .homeText{
     z-index: 10000;
     font-family: "EFRegular";
