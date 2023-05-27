@@ -55,7 +55,7 @@ h2 {
 }
 
 .wideLogo {
-    pointer-events: none;
+    
     display: inline-flex;
     flex-direction: column;
   }
@@ -95,6 +95,10 @@ h2 {
     border:1px solid white;
     width: 100px;
     height: 100px;
+    text-decoration: none;
+}
+.squareLogoLink {
+    text-decoration: none;
 }
 .logoBottomText {
     justify-content: right;
@@ -130,6 +134,84 @@ h2 {
     margin-bottom: 12px;
     z-index: 1000;
     height:1px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .hamburger {
+    display: block;
+    width: auto;
+    height: 32px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+.hamburger span:first-child {
+    top: 0;
+    transform-origin: center;
+  }
+  
+  .hamburger span:last-child {
+    top: 0px;
+    transform-origin: center;
+  }
+  
+  #hamburger-toggle {
+    display: none;
+  }
+  
+  #hamburger-toggle:checked ~ .nav-menu {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  #hamburger-toggle:checked ~ .hamburger span:first-child {
+    transform: translateY(18px) rotate(45deg);
+  }
+  
+  #hamburger-toggle:checked ~ .hamburger span:last-child {
+    transform: translateY(0px) rotate(-45deg);
+  }
+  
+  .nav-menu {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,);
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .nav-menu ul li {
+    margin-bottom: 20px;
+  }
+  
+  .nav-menu ul li a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .nav-menu ul li a:hover {
+    color: #aaa;
+  }
+  li {
+    color: #000000;
   }
 /* div {
     border:1px dotted red; 
@@ -149,6 +231,14 @@ h2 {
     padding-left: 12vw;
     padding-top: 16vh;
 }
+input {
+    display:none;
+}
+
+nav {
+    position:absolute;
+}
+
 @media (max-width: 820px) {
     .background {
         display:none;
@@ -168,10 +258,27 @@ h2 {
         display:flex; 
         flex-direction: column;
         border:1px solid rgb(255, 255, 255);
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
     }
     .navWrapper {
         display:none;
+    }
+}
+@media (max-width: 600px) {
+    .transparent {
+        opacity: 20%;
+    }
+    .squareLogo {
+        position:relative;
+        display:flex; 
+        flex-direction: column;
+        border:1px solid white;
+        width: 120px;
+        height: 120px;
+    }
+    .squareText {
+        font-size: 1.2rem;
+        letter-spacing: 1.2rem;
     }
 }
