@@ -46,6 +46,9 @@ h2 {
     font-size: 12px;
     z-index: 10000;
 }
+.topText, .bottomText {
+  overflow-y: hidden;
+}
 /* opaque filter */
 .transparent{
     position:absolute;
@@ -98,6 +101,7 @@ h2 {
     width: 100px;
     height: 100px;
     text-decoration: none;
+    z-index: 99999999;
 }
 .squareLogoLink {
     text-decoration: none;
@@ -135,8 +139,8 @@ h2 {
     width: auto;
     height: 32px;
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 2.5rem;
+    right: 3rem;
     cursor: pointer;
     z-index: 99999999;
     overflow-y: hidden;
@@ -239,6 +243,7 @@ h2 {
     height: 100%;
     background-color: rgba(0, 0, 0,);
     transition: opacity 0.3s ease-in-out;
+    overflow-y: hidden;
   }
   
   .nav-menu ul {
@@ -248,6 +253,7 @@ h2 {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: fit-content;
     transform: translate(-50%, -50%);
     text-align: center;
   }
@@ -260,7 +266,6 @@ h2 {
   .nav-menu ul li a {
     color: black;
     font-size: 24px;
-    text-decoration: none;
   }
   
   .nav-menu ul li a:hover {
@@ -299,20 +304,23 @@ nav.nav-menu ul li a {
   font-family: "EFThin";
   font-size: 4rem;
   overflow-y: hidden;
+  border-bottom: 1px solid black;
 }
 
 .section1 {
   background-color: white;
   z-index: 99999;
   width:100vw;
-  height:100vh;
+  height:110vh;
 }
 
 .blackText {
   color: black;
   z-index: 999999;
 }
-
+.blackBorder {
+  border:2px solid black;
+}
 .blackLine {
   background-color: black;
 }
@@ -326,10 +334,185 @@ div.wideLogo {
 .navWrapperMobile{
   display:none;
 }
+div.menuBtn input label {
+  position: relative;
+  right:2rem;
+  padding-right: 2rem;
+}
+.underlined {
 
+  width:100%;
+  border-bottom: 1px solid black;
+}
+nav.nav-menu ul li a h3 {
+  overflow-y: hidden;
+}
+h3 {
+  font-size: 3rem;
+  margin:0;
+}
+.tabletCross, .tabletVertical, .mobileCross, .mobileVertical {
+  display:none;
+}
+.section1 {
+  width: 100vw;
+  height: 100vh;
+}
+.whiteBackdrop {
+  z-index: 99999;
+  position:absolute;
+  width: 100%;
+  height: 100%;
+}
+.navLogos{
+  position:fixed;
+  z-index: 9999999999;
+}
+.scrollDiv {
+  position:absolute;
+  bottom:0;
+  width: 100vw;
+  display:flex;
+  justify-content: center;
+}
+.scrollText {
+  display:none;
+  z-index: 999999;
+  rotate:90deg;
+  font-family: 'EFThin';
+  font-weight: 400;
+  color:white;
+  padding-bottom: 2rem;
+  position:relative;
+  right:1.2rem;
+}
+.sideMenu {
+  position: absolute;
+  display:flex;
+  height: 100vh;
+  justify-content: center;
+  background-color: black;
+}
+.sideText {
+  font-family: "EFThin";
+  color: white;
+  display:flex;
+  position:relative;
+  bottom: 50vh;
+  left:10%;
+  writing-mode: vertical-lr;
+  z-index: 100000;
+  position: relative;
+  text-orientation: sideways;
+  rotate: 180deg;
+  pointer-events: none;
+}
+
+.sideMenuWhite{
+  z-index: 999999999;
+  position: absolute;
+  display:flex;
+  height: 100vh;
+  justify-content: center;
+  background-color: white;
+  border-right: 1px solid black;
+}
+.sideTextBlack{
+  font-family: "EFThin";
+  color: black;
+  display:flex;
+  position:relative;
+  bottom: 50vh;
+  left:10%;
+  writing-mode: vertical-lr;
+  z-index: 999999999;
+  position: relative;
+  text-orientation: sideways;
+  rotate: 180deg;
+  pointer-events: none;
+}
+.overflowY {
+  overflow:hidden;
+  height:100%;
+}
+.notebookList {
+  display:flex;
+  flex-direction: column;
+  text-align: left;
+}
+.nav-menu ul {
+  text-align: left;
+  position: absolute;
+  gap: 3rem;
+  left: 26rem;
+}
+.topMenuWrapper {
+  display:flex;
+  position: absolute;
+  width: 100vw;
+  justify-content: center;
+}
+.topMenuText {
+  font-family: 'EFRegular';
+  font-weight: 700;
+}
+.menuBackdropWrapper {
+  display:flex;
+  position: absolute;
+  width:100vw;
+  height: 100vh;
+  justify-content: center;
+}
+.menuBackdrop {
+ font-family: 'EFRegular';
+ font-weight: 400;
+ font-size: 14rem;
+ overflow-y: hidden;
+ position: relative;
+ top:8rem;
+ letter-spacing: 5rem;
+ right:4rem;
+ color:rgb(238, 238, 238);
+}
+/* mobile cross */
+@media (max-width: 900px) {
+
+.mobileCross{
+  display:inline;
+}
+.notebook {
+  display:none;
+}
+
+
+
+
+}
+/* tablet cross */
 @media (max-width: 820px) {
+  .scrollText{
+    display:flex;
+  }
+ .mobileCross{
+  display:none;
+ }
+ .tabletCross{display:inline
+}
   .transparent {
     opacity: 20%;
+}
+h1{
+  font-size: 3rem;
+}
+.squareLogo {
+  position:fixed;
+  display:flex; 
+  flex-direction: column;
+  border:2px solid rgb(255, 255, 255);
+  width: 110px;
+  height: 120px;
+  overflow-y: hidden;
+  z-index: 99999999;
 }
     .background {
         display:none;
@@ -345,14 +528,9 @@ div.wideLogo {
         width: 100vw;
         background-image: url(assets/Titelbild\ mobile.jpg);
     }
-    .squareLogo {
-        position:relative;
-        display:flex; 
-        flex-direction: column;
-        border:2px solid rgb(255, 255, 255);
-        width: 110px;
-        height: 120px;
-        overflow-y: hidden;
+
+    .blackBorder {
+      border:2px solid black;
     }
     div.half{
       overflow-y: hidden;
@@ -360,10 +538,10 @@ div.wideLogo {
     .bottomHalf {
       padding-bottom: 0px;
       padding-left: 3px;
-      
+
     }
-    .navWrapper {
-        display:none;
+    .wideLogo{
+      display:none;
     }
     .squareText {
       font-size: 1rem;
@@ -372,14 +550,26 @@ div.wideLogo {
       overflow-y: hidden;
     
     }
+    .homeWrapper{
+      padding-left:2.5rem;
+      padding-top: 7rem;
+    }
+    .homeText{
+      font-size: 3.5rem;
+    }
 }
+/* tablet vertical */
 @media (max-width: 600px) {
-   
+   .tabletCross{
+    display:none;
+   }
+   .tabletVertical{
+    display:inline;
+   }
     .squareLogo {
         position:relative;
         display:flex; 
         flex-direction: column;
-        border:2px solid white;
         width: 100px;
         height: 110px;
         padding-bottom: 6px;
@@ -389,12 +579,23 @@ div.wideLogo {
         font-size: 1rem;
         letter-spacing: 0.7rem;
     }
-    .homeText{
-      font-size: 2rem;
-font-size: clamp(2rem, 0.6285714285714286rem + 6.857142857142858vw, 3.2rem);
-    }
+
     .homeWrapper{
       padding-top: 6rem;
       padding-left: 1rem;
     }
+}
+/* mobile vertical */
+@media (max-width: 420px) {
+  .tabletVertical {
+    display:none;
+  }
+  .mobileVertical{
+    display:inline;
+  }
+  .homeWrapper{
+    display:flex;
+    padding-top: 6rem;
+    padding-left: 1rem;
+  }
 }
