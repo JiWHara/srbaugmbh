@@ -43,7 +43,7 @@ h2 {
     letter-spacing: 3px;
     word-spacing: 10px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 15px;
     z-index: 1000000;
 }
 .topText, .bottomText {
@@ -78,7 +78,7 @@ h2 {
   }
   
   .logoTopLine {
-    width: 58px;
+    width: 65px;
     height: 1px;
     background-color: rgb(255, 255, 255);
     display: inline-block;
@@ -86,7 +86,7 @@ h2 {
   }
   
   .logoBottomLine {
-    width: 62px;
+    width: 70px;
     height: 1px;
     background-color: rgb(255, 255, 255);
     display: inline-block;
@@ -283,14 +283,14 @@ h2 {
     color:white;
     font-size: clamp(2rem, 1.2rem + 4vw, 6rem);
     font-weight: 400;
-    line-height: 5.5rem;
+    line-height: clamp(4rem, 2.6764705882352944rem + 2.3529411764705883vw, 5.5rem);
     width: 10ch;
 }
 .homeWrapper{
     width: 80%;
     z-index: 10000;
     display:flex;
-    padding-left: 12vw;
+    padding-left: clamp(11rem, 8.352941176470589rem + 4.705882352941177vw, 14rem);
     padding-top: 16vh;
 }
 input {
@@ -328,7 +328,7 @@ nav.nav-menu ul li a {
 div.wideLogo {
   position:fixed;
   height: 100vh;
-  display:block;
+
 }
 * {
   overflow-x: hidden;
@@ -554,6 +554,7 @@ right: 20vw;
 .mobileCross{
   display:inline;
 }
+
 .notebook {
   display:none;
 }
