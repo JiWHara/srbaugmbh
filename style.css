@@ -38,13 +38,13 @@ header {
 }
 h2 {
     color:white;
-    margin: 0;
+    margin: 0px;
     font-family:'EFThin';
     letter-spacing: 3px;
     word-spacing: 10px;
     font-weight: 700;
-    font-size: 12px;
-    z-index: 10000;
+    font-size: 14px;
+    z-index: 1000000;
 }
 .topText, .bottomText {
   overflow-y: hidden;
@@ -73,12 +73,12 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 0.5rem;
+    gap: 10px;
     z-index: 9999999;
   }
   
   .logoTopLine {
-    width: 3.2rem;
+    width: 58px;
     height: 1px;
     background-color: rgb(255, 255, 255);
     display: inline-block;
@@ -86,7 +86,7 @@ h2 {
   }
   
   .logoBottomLine {
-    width: 3.5rem;
+    width: 62px;
     height: 1px;
     background-color: rgb(255, 255, 255);
     display: inline-block;
@@ -283,6 +283,7 @@ h2 {
     color:white;
     font-size: clamp(2rem, 1.2rem + 4vw, 6rem);
     font-weight: 400;
+    line-height: 5.5rem;
     width: 10ch;
 }
 .homeWrapper{
@@ -326,6 +327,8 @@ nav.nav-menu ul li a {
 }
 div.wideLogo {
   position:fixed;
+  height: 100vh;
+  display:block;
 }
 * {
   overflow-x: hidden;
@@ -442,9 +445,9 @@ h3 {
 }
 .nav-menu ul {
   text-align: left;
-  position: absolute;
+  position: relative;
   gap: 3rem;
-  left: 26rem;
+  width: 100%;
 }
 .topMenuWrapper {
   display:flex;
@@ -473,7 +476,78 @@ h3 {
  letter-spacing: 5rem;
  right:4rem;
  color:rgb(238, 238, 238);
+ pointer-events: none;
 }
+.notebookMenuInfo {
+  display:flex;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top:20vh;
+  
+  justify-content: space-around;
+}
+.menuInfo {
+ display:flex;
+ flex-direction: column;
+ position:relative;
+right: 20vw;
+ width:auto;
+ height:100vh;
+}
+.menuContact {
+ display:flex;
+ flex-direction: row;
+ justify-content: space-between;
+ height: 50vh;
+ width: 100%;
+ gap: 10vw;
+}
+.anfrage {
+  width: 35ch;
+}
+.row {
+  display:flex;
+  flex-direction: column;
+  width: 500px;
+}
+.rowTag {
+  display:flex;
+  flex-direction: row;
+}
+.telefonEmail {
+  font-family: 'EFThin';
+  font-weight: 400;
+  font-size: 1.25rem;
+  letter-spacing: 5px;
+  color:grey;
+  overflow-y: hidden;
+}
+.normalText {
+  font-family: 'EFThin';
+  font-weight: 700;
+  font-size: 1.25rem;
+ overflow-y: hidden;
+
+}
+
+.anfrageSenden {
+  background-color: white;
+  font-family: 'EFRegular';
+  font-size: 1.2rem;
+  margin-top:2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+
+
+
+
+
+
 /* mobile cross */
 @media (max-width: 900px) {
 
@@ -551,7 +625,7 @@ h1{
     
     }
     .homeWrapper{
-      padding-left:2.5rem;
+      padding-left:2rem;
       padding-top: 7rem;
     }
     .homeText{
