@@ -285,13 +285,19 @@ h2 {
     font-weight: 400;
     line-height: clamp(4rem, 2.6764705882352944rem + 2.3529411764705883vw, 5.5rem);
     width: 10ch;
+    text-decoration: none;
 }
 .homeWrapper{
     width: 80%;
     z-index: 10000;
     display:flex;
-    padding-left: clamp(11rem, 8.352941176470589rem + 4.705882352941177vw, 14rem);
-    padding-top: 16vh;
+    position:relative;
+    top: 15vh;
+    left: 150px;
+}
+.logoWideTitle {
+  width: 100vw;
+  height: 100vh;
 }
 input {
     display:none;
@@ -327,8 +333,6 @@ nav.nav-menu ul li a {
 }
 div.wideLogo {
   position:fixed;
-  height: 100vh;
-
 }
 * {
   overflow-x: hidden;
@@ -626,8 +630,8 @@ h1{
     
     }
     .homeWrapper{
-      padding-left:2rem;
-      padding-top: 7rem;
+      position: relative;
+    
     }
     .homeText{
       font-size: 3.5rem;
