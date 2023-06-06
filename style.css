@@ -40,10 +40,10 @@ h2 {
     color:white;
     margin: 0px;
     font-family:'EFThin';
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     word-spacing: 10px;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 13px;
     z-index: 1000000;
 }
 .topText, .bottomText {
@@ -78,7 +78,7 @@ h2 {
   }
   
   .logoTopLine {
-    width: 65px;
+    width: 52px;
     height: 1px;
     background-color: rgb(255, 255, 255);
     display: inline-block;
@@ -86,7 +86,7 @@ h2 {
   }
   
   .logoBottomLine {
-    width: 70px;
+    width: 59px;
     height: 1px;
     background-color: rgb(255, 255, 255);
     display: inline-block;
@@ -126,7 +126,7 @@ h2 {
 .hamburgerMenu {
     position:relative;
     display:block;
-    width: 50px;
+    width: 40px;
     height: 2px;
     background-color:white;
     margin-bottom: 12px;
@@ -166,11 +166,11 @@ h2 {
   }
   
   #hamburger-toggle:checked ~ .hamburger span:first-child {
-    transform: translateY(18px) rotate(45deg);
+    transform: translateY(14px) rotate(45deg);
   }
   
   #hamburger-toggle:checked ~ .hamburger span:last-child {
-    transform: translateY(0px) rotate(-45deg);
+    transform: translateY(1px) rotate(-45deg);
   }
   #hamburger-toggle {
     display: none;
@@ -199,6 +199,7 @@ h2 {
     transition: transform 0.3s ease-in-out;
     z-index: 100000;
     color:black;
+    overflow-y: hidden;
   }
   
   .nav-menu ul {
@@ -207,7 +208,7 @@ h2 {
     margin: 0;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 1rem;
     transform: translate(-50%, -50%);
     text-align: center;
     
@@ -251,11 +252,12 @@ h2 {
     padding: 0;
     margin: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: clamp(18rem, 6.505397448478901rem + 20.41216879293425vw, 31rem);
+    left: clamp(22rem, -1.8734052993130526rem + 42.39450441609421vw, 49rem);
     width: fit-content;
     transform: translate(-50%, -50%);
     text-align: center;
+    overflow-y:hidden;
   }
   
   .nav-menu ul li {
@@ -285,19 +287,13 @@ h2 {
     font-weight: 400;
     line-height: clamp(4rem, 2.6764705882352944rem + 2.3529411764705883vw, 5.5rem);
     width: 10ch;
-    text-decoration: none;
 }
 .homeWrapper{
     width: 80%;
     z-index: 10000;
     display:flex;
-    position:relative;
-    top: 15vh;
-    left: 150px;
-}
-.logoWideTitle {
-  width: 100vw;
-  height: 100vh;
+    padding-left:clamp(11.875rem, 9.117647058823529rem + 4.901960784313726vw, 15rem);
+    padding-top: 13.5vh;
 }
 input {
     display:none;
@@ -333,6 +329,8 @@ nav.nav-menu ul li a {
 }
 div.wideLogo {
   position:fixed;
+  height: 100vh;
+
 }
 * {
   overflow-x: hidden;
@@ -397,6 +395,7 @@ h3 {
   position: absolute;
   display:flex;
   height: 100vh;
+  width:35px;
   justify-content: center;
   background-color: black;
 }
@@ -406,20 +405,25 @@ h3 {
   display:flex;
   position:relative;
   bottom: 50vh;
-  left:10%;
+  left:0px;
+  font-weight: 400;
   writing-mode: vertical-lr;
-  z-index: 100000;
+  z-index: 99999100000;
   position: relative;
   text-orientation: sideways;
   rotate: 180deg;
   pointer-events: none;
 }
-
+h4{
+   display:flex;
+   margin: 0;
+}
 .sideMenuWhite{
   z-index: 999999999;
   position: absolute;
   display:flex;
   height: 100vh;
+  width: 35px;
   justify-content: center;
   background-color: white;
   border-right: 1px solid black;
@@ -430,9 +434,10 @@ h3 {
   display:flex;
   position:relative;
   bottom: 50vh;
-  left:10%;
+  left:0px;
+  font-weight: 400;
   writing-mode: vertical-lr;
-  z-index: 999999999;
+  z-index: 99999100000;
   position: relative;
   text-orientation: sideways;
   rotate: 180deg;
@@ -450,18 +455,22 @@ h3 {
 .nav-menu ul {
   text-align: left;
   position: relative;
-  gap: 3rem;
+  gap:clamp(0rem, -2.210500490677134rem + 3.9254170755642783vw, 2.5rem);
   width: 100%;
 }
 .topMenuWrapper {
   display:flex;
   position: absolute;
   width: 100vw;
+  height: 10vh;
   justify-content: center;
 }
 .topMenuText {
   font-family: 'EFRegular';
   font-weight: 700;
+  overflow-y: hidden;
+  position: relative;
+  top: 50%;
 }
 .menuBackdropWrapper {
   display:flex;
@@ -469,16 +478,17 @@ h3 {
   width:100vw;
   height: 100vh;
   justify-content: center;
+  overflow-y: hidden;
 }
 .menuBackdrop {
  font-family: 'EFRegular';
  font-weight: 400;
- font-size: 14rem;
+ font-size: clamp(8rem, 5.347399411187439rem + 4.710500490677134vw, 11rem);
  overflow-y: hidden;
  position: relative;
- top:8rem;
- letter-spacing: 5rem;
- right:4rem;
+ top:clamp(17rem, 9.042198233562317rem + 14.131501472031402vw, 26rem);
+ letter-spacing: clamp(3rem, 2.1157998037291463rem + 1.5701668302257115vw, 4rem);
+ right:clamp(0.125rem, -4.1854759568204125rem + 7.654563297350343vw, 5rem);
  color:rgb(238, 238, 238);
  pointer-events: none;
 }
@@ -488,51 +498,58 @@ h3 {
   width: 100vw;
   height: 100vh;
   top:20vh;
-  
+  overflow-y: hidden;
   justify-content: space-around;
 }
 .menuInfo {
  display:flex;
  flex-direction: column;
  position:relative;
-right: 20vw;
+right: clamp(2.5rem, -19.162904808635915rem + 38.46908734052993vw, 27rem);
  width:auto;
- height:100vh;
+ height:clamp(21.875rem, -18.4666339548577rem + 71.63886162904808vw, 67.5rem);
 }
 .menuContact {
  display:flex;
  flex-direction: row;
- justify-content: space-between;
  height: 50vh;
  width: 100%;
- gap: 10vw;
+ gap: 0;
 }
 .anfrage {
-  width: 35ch;
+  width: 51ch;
 }
 .row {
   display:flex;
   flex-direction: column;
-  width: 500px;
+  width: 600px;
 }
 .rowTag {
   display:flex;
   flex-direction: row;
 }
+.anfrageBtn {
+  height:130px;
+  overflow-y: hidden;
+}
 .telefonEmail {
   font-family: 'EFThin';
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: clamp(0.8rem, 0.4021099116781159rem + 0.70657507360157vw, 1.25rem);
   letter-spacing: 5px;
+  margin-bottom: 0;
   color:grey;
   overflow-y: hidden;
 }
 .normalText {
   font-family: 'EFThin';
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: clamp(0.8rem, 0.4021099116781159rem + 0.70657507360157vw, 1.25rem);
  overflow-y: hidden;
-
+ letter-spacing: 0.2rem;
+ margin-bottom: 0;
+ position:relative;
+ height: 100px;
 }
 
 .anfrageSenden {
@@ -544,11 +561,16 @@ right: 20vw;
   padding-bottom: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  overflow-y: hidden;
 }
 
+.menuText {
+  font-size: clamp(2.3rem, 1.681059862610402rem + 1.0991167811579983vw, 3rem);
+}
 
-
-
+nav {
+  overflow-y:hidden;
+}
 
 
 
@@ -630,8 +652,8 @@ h1{
     
     }
     .homeWrapper{
-      position: relative;
-    
+      padding-left:2rem;
+      padding-top: 7rem;
     }
     .homeText{
       font-size: 3.5rem;
