@@ -40,9 +40,9 @@ h2 {
     color:white;
     margin: 0px;
     font-family:'EFThin';
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     word-spacing: 10px;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 13px;
     z-index: 1000000;
 }
@@ -67,7 +67,17 @@ h2 {
   .logoTopText,
   .logoBottomText {
     font-family: 'ESThin';
+    overflow-y: hidden;
   }
+ .topText{
+  position:relative;
+  bottom: 2px;
+
+ }
+ .bottomText{
+  position:relative;
+  top:2px;
+ }
   .wideLogoTop,
   .wideLogoBottom {
     display: flex;
@@ -292,7 +302,7 @@ h2 {
     width: 80%;
     z-index: 10000;
     display:flex;
-    padding-left:clamp(11.875rem, 9.117647058823529rem + 4.901960784313726vw, 15rem);
+    padding-left:clamp(10rem, 7.352941176470589rem + 4.705882352941177vw, 13rem);
     padding-top: 13.5vh;
 }
 input {
