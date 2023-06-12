@@ -40,10 +40,10 @@ h2 {
     color:white;
     margin: 0px;
     font-family:'EFRegular';
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
     word-spacing: 10px;
-    font-weight: 500;
-    font-size: 13px;
+    font-weight: normal;
+    font-size: 14px;
     z-index: 1000000;
 }
 .topText, .bottomText {
@@ -63,11 +63,13 @@ h2 {
     display: inline-flex;
     flex-direction: column;
     z-index: 9999999;
+    height: 300px;
   }
   .logoTopText,
   .logoBottomText {
     font-family: 'ESThin';
     overflow-y: hidden;
+    height:auto;
   }
  .topText{
   position:relative;
@@ -76,7 +78,8 @@ h2 {
  }
  .bottomText{
   position:relative;
-  top:2px;
+  top:4px;
+  height:25px;
  }
   .wideLogoTop,
   .wideLogoBottom {
@@ -93,18 +96,14 @@ h2 {
     background-color: rgb(255, 255, 255);
     display: inline-block;
     z-index: 1000;
-    position:relative;
-    right:3px;
   }
-
+  
   .logoBottomLine {
     width: 61px;
     height: 1px;
     background-color: rgb(255, 255, 255);
     display: inline-block;
     z-index: 1000;
-    position: relative;
-    left: 1px;
   }
 .squareLogo {
     position:relative;
