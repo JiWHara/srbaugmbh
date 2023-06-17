@@ -8,6 +8,7 @@ html { box-sizing: border-box;}
 
 html, * {
     overflow-x: hidden;
+    line-height: 1;
 }
 .homeText{
   overflow-y: hidden;
@@ -73,25 +74,29 @@ h2 {
   }
  .topText{
   position:relative;
-  bottom: 2px;
+  bottom: 1px;
 
  }
  .bottomText{
   position:relative;
-  top:4px;
-  height:25px;
+  top:3px;
+  height:21px;
  }
   .wideLogoTop,
   .wideLogoBottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
     z-index: 9999999;
   }
-  
+  .wideLogoTop{
+    gap:0px;
+  }
+  .wideLogoBottom{
+    gap:0px;
+  }
   .logoTopLine {
-    width: 52px;
+    width: 65px;
     height: 1px;
     background-color: rgb(255, 255, 255);
     display: inline-block;
@@ -99,7 +104,7 @@ h2 {
   }
   
   .logoBottomLine {
-    width: 61px;
+    width: 65px;
     height: 1px;
     background-color: rgb(255, 255, 255);
     display: inline-block;
@@ -130,8 +135,8 @@ h2 {
 }
 
 .navWrapper {
-    padding-top: 4vh;
-    padding-left: 5vw;
+    padding-top: 4.5vh;
+    padding-left: 4.5vw;
     padding-right: 2vw;
     display:flex;
     justify-content: space-between;
